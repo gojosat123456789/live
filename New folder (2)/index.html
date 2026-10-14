@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f5">
+  <title>A Little Question</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #fff0f5;
+      color: #4c2635;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 15%, #ffffff 0 2px, transparent 3px),
+        radial-gradient(circle at 85% 25%, #ffffff 0 2px, transparent 3px),
+        linear-gradient(135deg, #fff7fa, #ffe2ed);
+    }
+
+    .card {
+      width: min(92vw, 470px);
+      padding: 42px 24px 32px;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 20px 60px rgba(143, 57, 91, 0.16);
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .heart {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 48px;
+      animation: heartbeat 1.4s ease-in-out infinite;
+    }
+
+    h1 {
+      margin: 0;
+      color: #b83265;
+      font-size: clamp(1.8rem, 7vw, 2.5rem);
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      margin: 14px 0 24px;
+      color: #795362;
+      font-size: 1.05rem;
+    }
+
+    .button-area {
+      position: relative;
+      width: min(100%, 350px);
+      height: 116px;
+      margin: 0 auto;
+    }
+
+    .choice {
+      position: absolute;
+      top: 24px;
+      min-width: 112px;
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 999px;
+      font: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      touch-action: manipulation;
+      transition: left 180ms ease, top 180ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .choice:hover {
+      transform: translateY(-2px);
+    }
+
+    .choice:focus-visible {
+      outline: 3px solid #71304b;
+      outline-offset: 4px;
+    }
+
+    #yes-button {
+      left: 15%;
+      color: #fff;
+      background: #e64f82;
+      box-shadow: 0 8px 18px rgba(230, 79, 130, 0.3);
+    }
+
+    #yes-button:hover {
+      background: #d93a70;
+      box-shadow: 0 10px 22px rgba(230, 79, 130, 0.4);
+    }
+
+    #no-button {
+      left: 57%;
+      color: #704958;
+      background: #f4e5eb;
+      box-shadow: 0 6px 14px rgba(100, 45, 67, 0.12);
+      transition: left 60ms ease, top 60ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    #message {
+      min-height: 1.5em;
+      margin: 2px 0 0;
+      color: #b83265;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .balloon {
+      position: fixed;
+      z-index: 2;
+      bottom: -130px;
+      width: 46px;
+      height: 58px;
+      border-radius: 50% 50% 46% 46%;
+      pointer-events: none;
+      animation: float-up var(--duration) ease-in forwards;
+    }
+
+    .balloon::before {
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-right: 6px solid transparent;
+      border-bottom: 9px solid var(--balloon-color);
+      border-left: 6px solid transparent;
+      content: "";
+      transform: translateX(-50%);
+    }
+
+    .balloon::after {
+      position: absolute;
+      top: 65px;
+      left: 50%;
+      width: 1px;
+      height: 62px;
+      background: rgba(90, 70, 80, 0.45);
+      content: "";
+    }
+
+    @keyframes float-up {
+      to {
+        transform: translate(var(--drift), -125vh) rotate(12deg);
+        opacity: 0.15;
+      }
+    }
+
+    @keyframes heartbeat {
+      50% {
+        transform: scale(1.12);
+      }
+    }
+
+    @media (max-width: 380px) {
+      .card {
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+
+      .choice {
+        min-width: 102px;
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <span class="heart" aria-hidden="true">💖</span>
+    <h1>Do you love me Asim Gill?</h1>
+    <p class="subtitle">I have a little question for you, Asim Gill ...</p>
+    <div class="button-area" id="button-area">
+      <button class="choice" id="yes-button" type="button">Yes! 💕</button>
+      <button class="choice" id="no-button" type="button">No 🙈</button>
+    </div>
+    <p id="message" aria-live="polite"></p>
+  </main>
+
+  <script>
+    const area = document.getElementById("button-area");
+    const yesButton = document.getElementById("yes-button");
+    const noButton = document.getElementById("no-button");
+    const message = document.getElementById("message");
+    const balloonColors = ["#f45b87", "#ffbd59", "#8d80e8", "#52c7b8", "#ff7b54"];
+
+    function moveNoButton(event) {
+      const maxLeft = Math.max(0, area.clientWidth - noButton.offsetWidth);
+      const maxTop = Math.max(0, area.clientHeight - noButton.offsetHeight);
+      const areaRect = area.getBoundingClientRect();
+      const pointerX = event ? event.clientX - areaRect.left : -1;
+      const pointerY = event ? event.clientY - areaRect.top : -1;
+      const yesLeft = yesButton.offsetLeft;
+      const yesTop = yesButton.offsetTop;
+      let nextLeft = Math.random() * maxLeft;
+      let nextTop = Math.random() * maxTop;
+
+      if (event) {
+        let greatestDistance = -1;
+        for (let attempt = 0; attempt < 30; attempt += 1) {
+          const candidateLeft = Math.random() * maxLeft;
+          const candidateTop = Math.random() * maxTop;
+          const overlapsYes = candidateLeft < yesLeft + yesButton.offsetWidth
+            && candidateLeft + noButton.offsetWidth > yesLeft
+            && candidateTop < yesTop + yesButton.offsetHeight
+            && candidateTop + noButton.offsetHeight > yesTop;
+          if (overlapsYes) continue;
+
+          const centerX = candidateLeft + noButton.offsetWidth / 2;
+          const centerY = candidateTop + noButton.offsetHeight / 2;
+          const distance = (centerX - pointerX) ** 2 + (centerY - pointerY) ** 2;
+
+          if (distance > greatestDistance) {
+            greatestDistance = distance;
+            nextLeft = candidateLeft;
+            nextTop = candidateTop;
+          }
+        }
+
+        if (greatestDistance < 0) {
+          nextLeft = maxLeft;
+          nextTop = maxTop;
+        }
+      }
+
+      noButton.style.left = `${nextLeft}px`;
+      noButton.style.top = `${nextTop}px`;
+    }
+
+    function releaseBalloons() {
+      message.textContent = "Yay! You made my day! I really love you, Asim Gill 💖";
+      yesButton.disabled = true;
+      noButton.disabled = true;
+
+      for (let index = 0; index < 24; index += 1) {
+        const balloon = document.createElement("span");
+        const color = balloonColors[index % balloonColors.length];
+        balloon.className = "balloon";
+        balloon.setAttribute("aria-hidden", "true");
+        balloon.style.left = `${Math.random() * 100}vw`;
+        balloon.style.setProperty("--balloon-color", color);
+        balloon.style.background = `radial-gradient(circle at 32% 25%, #fff9, transparent 22%), ${color}`;
+        balloon.style.setProperty("--duration", `${4 + Math.random() * 3}s`);
+        balloon.style.setProperty("--drift", `${Math.random() * 160 - 80}px`);
+        balloon.style.animationDelay = `${Math.random() * 1.5}s`;
+        document.body.appendChild(balloon);
+        balloon.addEventListener("animationend", () => balloon.remove(), { once: true });
+      }
+    }
+
+    noButton.addEventListener("pointerenter", event => {
+      if (event.pointerType === "mouse") moveNoButton(event);
+    });
+    noButton.addEventListener("click", moveNoButton);
+    yesButton.addEventListener("click", releaseBalloons);
+  </script>
+</body>
+</html>
