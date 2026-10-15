@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d0c">
+  <meta name="description" content="Ashan Raza's graphic design portfolio, featuring ten visual design concepts, services, course certificate, and WhatsApp project inquiries.">
+  <title>Ashan Raza — Graphic Designer & Visual Designer</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #080d0c;
+      --paper: #f1eee5;
+      --muted: #a9aca2;
+      --green: #a5c88a;
+      --gold: #d5b978;
+      --line: rgba(238, 236, 222, .13);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 78% 13%, rgba(79, 111, 75, .17), transparent 34rem),
+        radial-gradient(ellipse at 12% 58%, rgba(142, 113, 59, .08), transparent 35rem),
+        var(--ink);
+      color: var(--paper);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .shell { width: min(1160px, calc(100% - 64px)); margin: 0 auto; }
+    .topbar {
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(8, 13, 12, .9);
+      backdrop-filter: blur(16px);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--paper);
+      font-size: 12px;
+      font-weight: 650;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+    .brand-mark {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border: 1px solid rgba(213, 185, 120, .55);
+      border-radius: 50%;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a {
+      color: #c3c4ba;
+      font-size: 12px;
+      transition: color .2s ease;
+    }
+    nav a:hover, nav a:focus-visible { color: var(--green); }
+    nav .nav-contact {
+      padding: 11px 16px;
+      border: 1px solid rgba(213, 185, 120, .42);
+      border-radius: 3px;
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 690px;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 36px;
+      padding: 74px 0 92px;
+      perspective: 1400px;
+    }
+    .hero-copy { position: relative; z-index: 2; padding: 4px 0 20px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 650;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { width: 29px; height: 1px; background: var(--gold); content: ""; }
+    h1 {
+      max-width: 640px;
+      margin: 27px 0 23px;
+      font-family: var(--serif);
+      font-size: clamp(54px, 7vw, 91px);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: .99;
+    }
+    h1 em { color: var(--green); font-weight: 400; }
+    .hero-copy > p {
+      max-width: 420px;
+      margin: 0;
+      color: #b4b7ad;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 35px; }
+    .button {
+      display: inline-flex;
+      min-height: 49px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 20px;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      background: var(--gold);
+      color: #11140f;
+      font-size: 12px;
+      font-weight: 700;
+      transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+    }
+    .button:hover {
+      transform: translateY(-3px);
+      background: #e2cb96;
+      box-shadow: 0 12px 30px rgba(213, 185, 120, .15);
+    }
+    .button.secondary { background: transparent; color: var(--paper); border-color: var(--line); }
+    .button.secondary:hover { border-color: var(--green); color: var(--green); box-shadow: none; }
+    .arrow { font-size: 17px; line-height: 1; }
+
+    .portrait-stage {
+      position: relative;
+      width: min(100%, 435px);
+      height: 508px;
+      justify-self: center;
+      transform-style: preserve-3d;
+    }
+    .portrait-glow {
+      position: absolute;
+      inset: 11% 2% 3% 7%;
+      border-radius: 48%;
+      background: rgba(137, 169, 111, .18);
+      filter: blur(62px);
+      transform: translateZ(-50px);
+    }
+    .portrait-frame {
+      position: absolute;
+      inset: 0 29px 24px 25px;
+      overflow: hidden;
+      border: 1px solid rgba(226, 210, 165, .43);
+      border-radius: 210px 210px 7px 7px;
+      background: #202a24;
+      box-shadow: 0 32px 90px rgba(0, 0, 0, .5), inset 0 0 0 8px rgba(255, 255, 255, .025);
+      transform: rotateY(-7deg) rotateX(2deg) translateZ(16px);
+      transition: transform .35s ease-out;
+      transform-style: preserve-3d;
+    }
+    .portrait-frame::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(8, 13, 12, .42));
+      content: "";
+      pointer-events: none;
+    }
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center 24%;
+      filter: saturate(.83) contrast(1.04);
+    }
+    .portrait-caption {
+      position: absolute;
+      z-index: 2;
+      right: 14px;
+      bottom: 9px;
+      left: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: rgba(247, 244, 233, .85);
+      font-size: 9px;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      transform: translateZ(26px);
+    }
+    .orbit {
+      position: absolute;
+      top: 40px;
+      right: 1px;
+      width: 83px;
+      height: 83px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(213, 185, 120, .52);
+      border-radius: 50%;
+      background: rgba(12, 18, 15, .9);
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 28px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .3);
+      transform: translateZ(70px);
+      animation: float 5s ease-in-out infinite;
+    }
+    .photo-note {
+      position: absolute;
+      bottom: 6px;
+      left: -3px;
+      padding: 14px 17px;
+      border: 1px solid var(--line);
+      background: rgba(12, 18, 15, .91);
+      color: #d6d5c9;
+      font-family: var(--serif);
+      font-size: 14px;
+      font-style: italic;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, .25);
+      transform: translateZ(54px);
+    }
+    .scroll-hint {
+      position: absolute;
+      bottom: -1px;
+      right: 2px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+    }
+    .scroll-hint::after {
+      width: 1px;
+      height: 38px;
+      margin: 12px auto 0;
+      background: var(--gold);
+      content: "";
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 70px;
+      padding: 86px 0 92px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .section-kicker {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 650;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .intro h2, .contact h2 {
+      margin: 15px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(36px, 4.5vw, 56px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+      line-height: 1.1;
+    }
+    .intro-copy { max-width: 600px; }
+    .intro-copy p {
+      margin: 0 0 15px;
+      color: #b4b7ad;
+      font-size: 14px;
+      line-height: 1.95;
+    }
+    .values { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+    .value {
+      padding: 10px 13px;
+      border: 1px solid var(--line);
+      color: #deddd2;
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .work { padding: 86px 0 94px; }
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+    .section-heading h2 {
+      margin: 13px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(38px, 5vw, 60px);
+      font-weight: 400;
+      letter-spacing: -.04em;
+    }
+    .section-heading > p { max-width: 350px; margin: 0 0 5px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .project-card {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .025);
+      transition: transform .3s ease, border-color .3s ease;
+      transform-style: preserve-3d;
+      perspective: 900px;
+    }
+    .project-card:hover, .project-card:focus-visible { border-color: rgba(213, 185, 120, .56); outline: none; }
+    .project-art {
+      position: relative;
+      min-height: 232px;
+      display: grid;
+      overflow: hidden;
+      place-items: center;
+    }
+    .project-art svg { width: 100%; height: 100%; position: absolute; inset: 0; }
+    .project-card .project-art svg { transform: translateZ(18px) scale(.94); transition: transform .3s ease; }
+    .project-card:hover .project-art svg, .project-card:focus-visible .project-art svg { transform: translateZ(28px) scale(.97); }
+    .project-info { padding: 19px 19px 21px; }
+    .project-label { color: var(--gold); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
+    .project-info h3 { margin: 10px 0 8px; font-family: var(--serif); font-size: 23px; font-weight: 400; }
+    .project-info p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .project-cta { display: inline-block; margin-top: 13px; color: var(--green); font-size: 10px; }
+    .project-cta:hover { color: var(--gold); }
+    .education {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 70px;
+      padding: 76px 0 84px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .education h2 {
+      margin: 15px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(36px, 4.5vw, 56px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+      line-height: 1.1;
+    }
+    .education h2 em { color: var(--green); font-weight: 400; }
+    .education-card {
+      padding: 24px 26px;
+      border: 1px solid rgba(213, 185, 120, .3);
+      background: linear-gradient(135deg, rgba(213, 185, 120, .07), rgba(255, 255, 255, .015));
+      box-shadow: 12px 12px 0 rgba(213, 185, 120, .035);
+    }
+    .education-card .course-length { color: var(--green); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+    .education-card h3 { margin: 13px 0 6px; font-family: var(--serif); font-size: 29px; font-weight: 400; }
+    .education-card p { margin: 9px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .skill-list span { padding: 9px 11px; border: 1px solid var(--line); color: #d9d9ce; font-size: 10px; letter-spacing: .06em; }
+
+    .services { padding: 85px 0 92px; border-top: 1px solid var(--line); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .service-card {
+      display: block;
+      min-height: 185px;
+      padding: 24px 21px;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008));
+      box-shadow: 8px 8px 0 rgba(255,255,255,.018);
+      color: inherit;
+      text-decoration: none;
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+    .service-card:hover, .service-card:focus-visible { transform: translateY(-5px); border-color: rgba(165, 200, 138, .48); background: linear-gradient(145deg, rgba(165,200,138,.07), rgba(255,255,255,.015)); }
+    .service-card:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+    .service-icon { color: var(--green); font-family: var(--serif); font-size: 25px; }
+    .service-card h3 { margin: 15px 0 8px; font-family: var(--serif); font-size: 22px; font-weight: 400; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .service-cta { display: inline-block; margin-top: 15px; color: var(--green); font-size: 10px; }
+    .service-card:hover .service-cta, .service-card:focus-visible .service-cta { color: var(--gold); }
+    .process { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 38px; border: 1px solid var(--line); }
+    .process-step { padding: 19px 18px; border-right: 1px solid var(--line); }
+    .process-step:last-child { border-right: 0; }
+    .process-step span { color: var(--gold); font-size: 10px; letter-spacing: .15em; }
+    .process-step h3 { margin: 9px 0 6px; font-size: 13px; font-weight: 600; }
+    .process-step p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.65; }
+    .education-card .certificate {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 17px;
+      padding: 10px 12px;
+      border: 1px solid rgba(165, 200, 138, .35);
+      color: var(--green);
+      font-size: 11px;
+    }
+    .contact-layout { display: grid; grid-template-columns: .9fr 1.1fr; align-items: start; gap: 54px; padding: 80px 0 90px; }
+    .contact-copy h2 { max-width: 500px; margin: 15px 0 0; font-family: var(--serif); font-size: clamp(39px, 5vw, 59px); font-weight: 400; letter-spacing: -.035em; line-height: 1.08; }
+    .contact-copy h2 em { color: var(--green); font-weight: 400; }
+    .contact-copy > p { max-width: 390px; margin: 17px 0 24px; color: var(--muted); font-size: 13px; line-height: 1.85; }
+    .contact-detail { display: flex; align-items: center; gap: 13px; margin-top: 14px; color: #deddd2; font-size: 12px; }
+    .contact-detail .detail-icon { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--line); color: var(--gold); }
+    .contact-detail small { display: block; margin-bottom: 4px; color: var(--muted); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+    .inquiry-form { display: grid; gap: 14px; padding: 25px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008)); box-shadow: 12px 12px 0 rgba(213,185,120,.035); }
+    .inquiry-form h3 { margin: 0 0 4px; font-family: var(--serif); font-size: 25px; font-weight: 400; }
+    .form-hint { margin: -2px 0 3px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    .field { display: grid; gap: 7px; }
+    .field label { color: #d2d1c6; font-size: 10px; letter-spacing: .08em; }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      min-height: 43px;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      outline: none;
+      background: #0c1210;
+      color: var(--paper);
+      font: inherit;
+      font-size: 12px;
+    }
+    .field textarea { min-height: 88px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--green); }
+    .inquiry-form .button { width: 100%; cursor: pointer; }
+    .footer-contact { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 17px 0 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
+    .footer-contact a { color: var(--gold); }
+    .project-card { color: inherit; text-decoration: none; cursor: pointer; }
+    .project-card:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+
+    .contact {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 85px 0 92px;
+    }
+    .contact h2 { max-width: 580px; }
+    .contact h2 em { color: var(--green); font-weight: 400; }
+    .contact p { margin: 15px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .contact .button { flex: 0 0 auto; }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 21px 0 25px;
+      border-top: 1px solid var(--line);
+      color: #8f9489;
+      font-size: 10px;
+      letter-spacing: .08em;
+    }
+    footer a { color: var(--gold); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 38px, 560px); }
+      .topbar { min-height: 72px; height: auto; flex-wrap: wrap; gap: 12px; padding-top: 10px; }
+      nav { width: 100%; gap: 19px; overflow-x: auto; padding: 0 0 11px; scrollbar-width: none; }
+      nav::-webkit-scrollbar { display: none; }
+      nav a { flex: 0 0 auto; font-size: 10px; }
+      nav .nav-contact { padding: 7px 10px; }
+      .hero { min-height: auto; grid-template-columns: 1fr; gap: 20px; padding: 63px 0 62px; }
+      .hero-copy { padding: 0; }
+      h1 { max-width: 510px; margin-top: 22px; font-size: clamp(55px, 14vw, 79px); }
+      .hero-copy > p { font-size: 14px; }
+      .portrait-stage { width: min(100%, 400px); height: 445px; margin-top: 13px; }
+      .portrait-frame { inset: 0 25px 22px 22px; }
+      .orbit { width: 70px; height: 70px; right: 0; font-size: 24px; }
+      .intro { grid-template-columns: 1fr; gap: 21px; padding: 62px 0; }
+      .intro h2, .contact h2 { font-size: 43px; }
+      .section-heading { align-items: flex-start; flex-direction: column; }
+      .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+      .project-art { min-height: 170px; }
+      .project-info { padding: 15px 13px 17px; }
+      .project-info h3 { font-size: 19px; }
+      .project-info p { font-size: 11px; }
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .service-card { min-height: 175px; padding: 17px 14px; }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .process-step:nth-child(2) { border-right: 0; }
+      .process-step:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .education { grid-template-columns: 1fr; gap: 24px; padding: 62px 0; }
+      .contact-layout { grid-template-columns: 1fr; gap: 32px; padding: 63px 0; }
+      .inquiry-form { padding: 19px 15px; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 390px) {
+      .project-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+      .project-card .project-art svg { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="brand" href="#home" aria-label="Personal portfolio home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>Ashan Raza</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Portfolio</a>
+      <a href="#education">Education</a>
+      <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="shell hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">Graphic designer · Visual storyteller</span>
+        <h1>Soch ko<br>doon <em>naya rang.</em></h1>
+        <p>Hi, I’m Ashan Raza—a graphic designer creating clear, memorable visuals for brands, businesses, and people with a story to tell.</p>
+        <div class="hero-actions">
+          <a class="button" href="https://wa.me/923068778018" target="_blank" rel="noopener noreferrer">
+            Start a project <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="button secondary" href="#work">Explore my work <span class="arrow" aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="portrait-stage" id="portrait">
+        <div class="portrait-glow" aria-hidden="true"></div>
+        <div class="portrait-frame">
+          <img src="profile.jpg" alt="Ashan Raza, graphic designer">
+          <div class="portrait-caption"><span>Ashan Raza · Graphic designer</span><span>01 / 01</span></div>
+        </div>
+        <div class="orbit" aria-hidden="true">✳</div>
+        <div class="photo-note">Ideas, thoughtfully designed.</div>
+        <div class="scroll-hint" aria-hidden="true">Explore</div>
+      </div>
+    </section>
+
+    <section class="shell intro reveal" id="about">
+      <div>
+        <span class="section-kicker">01 / About</span>
+        <h2>Good design.<br>Clear purpose.</h2>
+      </div>
+      <div class="intro-copy" id="values">
+        <p>I’m Ashan Raza, a graphic designer with a creative approach to visual communication. I enjoy turning ideas into thoughtful, well-organized designs that are easy to understand and remember.</p>
+        <p>I create logo and branding concepts, social media graphics, posters, banners, advertisements, and packaging visuals. My design process considers the brief, intended audience, layout, typography, and colour.</p>
+        <div class="values" aria-label="Personal values">
+          <span class="value">Visual communication</span>
+          <span class="value">Creative thinking</span>
+          <span class="value">Attention to detail</span>
+          <span class="value">Brand consistency</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell services reveal" id="services">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">02 / Services</span>
+          <h2>Design services, made for you.</h2>
+        </div>
+        <p>Tell me what you need. I’ll help shape the idea into a polished visual that fits your brand and audience.</p>
+      </div>
+      <div class="services-grid">
+        <a class="service-card" href="project.html?service=logo-brand-identity" aria-label="View Logo and brand identity service"><span class="service-icon" aria-hidden="true">✳</span><h3>Logo & brand identity</h3><p>Logo concepts, colour direction, and a consistent look for a new or growing brand.</p><span class="service-cta">View service & request a quote ↗</span></a>
+        <a class="service-card" href="project.html?service=social-media-graphics" aria-label="View Social media graphics service"><span class="service-icon" aria-hidden="true">▧</span><h3>Social media graphics</h3><p>Scroll-stopping post and story designs shaped around your message and platform.</p><span class="service-cta">View service & request a quote ↗</span></a>
+        <a class="service-card" href="project.html?service=posters-flyers" aria-label="View Posters and flyers service"><span class="service-icon" aria-hidden="true">▤</span><h3>Posters & flyers</h3><p>Clear, attention-grabbing layouts for announcements, events, and promotions.</p><span class="service-cta">View service & request a quote ↗</span></a>
+        <a class="service-card" href="project.html?service=ad-creatives" aria-label="View Ad creatives service"><span class="service-icon" aria-hidden="true">◈</span><h3>Ad creatives</h3><p>Digital campaign visuals that give your offer a strong, easy-to-follow presentation.</p><span class="service-cta">View service & request a quote ↗</span></a>
+        <a class="service-card" href="project.html?service=packaging-concepts" aria-label="View Packaging concepts service"><span class="service-icon" aria-hidden="true">▱</span><h3>Packaging concepts</h3><p>Product label and packaging visuals that give your idea a distinctive shelf presence.</p><span class="service-cta">View service & request a quote ↗</span></a>
+        <a class="service-card" href="project.html?service=custom-design" aria-label="View Custom design service"><span class="service-icon" aria-hidden="true">✎</span><h3>Custom design</h3><p>Have a different project in mind? Share your brief and we can discuss what fits.</p><span class="service-cta">View service & request a quote ↗</span></a>
+      </div>
+      <div class="process" aria-label="How a design project works">
+        <article class="process-step"><span>STEP 01</span><h3>Share your brief</h3><p>Tell me about your business, audience, and what you need designed.</p></article>
+        <article class="process-step"><span>STEP 02</span><h3>Confirm the scope</h3><p>We agree on the deliverables, direction, timeline, and budget.</p></article>
+        <article class="process-step"><span>STEP 03</span><h3>Review the design</h3><p>I prepare the design concept and discuss any requested refinements.</p></article>
+        <article class="process-step"><span>STEP 04</span><h3>Receive your files</h3><p>Once approved, receive the agreed final design files.</p></article>
+      </div>
+    </section>
+
+    <section class="shell work reveal" id="work">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">03 / Portfolio · 9 concept samples</span>
+          <h2>Ideas made visible.</h2>
+        </div>
+        <p>These are original portfolio concept samples created to demonstrate visual directions. They are not presented as commissioned client work.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-art" style="background: radial-gradient(ellipse at 50% 43%, #d5b978 0%, #b58d45 16%, #20251b 17%, #11150f 66%);">
+            <svg viewBox="0 0 360 240" role="img" aria-label="Concept luxury brand identity design">
+              <rect x="36" y="28" width="288" height="184" rx="3" fill="none" stroke="#d5b978" stroke-opacity=".45"/>
+              <circle cx="180" cy="107" r="47" fill="#11150f" stroke="#d5b978" stroke-width="1"/>
+              <path d="M180 70 210 88v37l-30 18-30-18V88z" fill="none" stroke="#d5b978" stroke-width="2"/>
+              <path d="m150 88 30 18 30-18M180 106v37" fill="none" stroke="#d5b978" stroke-width="1.5"/>
+              <text x="180" y="180" fill="#f1eee5" font-family="Georgia,serif" font-size="12" letter-spacing="4" text-anchor="middle">N O O R  /  BRAND STUDY</text>
+            </svg>
+          </div>
+          <div class="project-info">
+            <span class="project-label">Brand identity · Concept</span>
+            <h3>Noor — Identity study</h3>
+            <p>A refined geometric logo study with a warm gold palette for a premium identity direction.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-art" style="background: linear-gradient(145deg, #d86643, #eea75b 58%, #e6cf9f);">
+            <svg viewBox="0 0 360 240" role="img" aria-label="Concept social media campaign poster">
+              <circle cx="286" cy="44" r="69" fill="#f6d48c" fill-opacity=".72"/>
+              <path d="M0 191 100 112l74 53 81-78 105 85v68H0z" fill="#273e32"/>
+              <path d="M0 209 114 153l73 40 76-62 97 59v50H0z" fill="#182c27"/>
+              <text x="26" y="57" fill="#fff6df" font-family="Georgia,serif" font-size="29">MAKE</text>
+              <text x="26" y="88" fill="#fff6df" font-family="Georgia,serif" font-style="italic" font-size="29">it matter.</text>
+              <text x="27" y="109" fill="#fff6df" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">CAMPAIGN POSTER · CONCEPT</text>
+              <rect x="27" y="124" width="67" height="1" fill="#fff6df" fill-opacity=".7"/>
+            </svg>
+          </div>
+          <div class="project-info">
+            <span class="project-label">Social campaign · Concept</span>
+            <h3>Make It Matter</h3>
+            <p>A campaign poster concept combining expressive typography with a layered, warm-toned landscape.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-art" style="background: radial-gradient(ellipse at 50% 80%, #4a644c, #17261e 70%);">
+            <svg viewBox="0 0 360 240" role="img" aria-label="Concept artisan coffee packaging design">
+              <ellipse cx="181" cy="196" rx="102" ry="15" fill="#000" fill-opacity=".35"/>
+              <path d="m114 66 68-27 66 27v108l-66 27-68-27z" fill="#bb985e" stroke="#e7d19f"/>
+              <path d="m182 39 66 27-66 29-68-29z" fill="#e0c38b" stroke="#f0dfb8"/>
+              <path d="m182 95 66-29v108l-66 27z" fill="#876a3e" stroke="#d2b67f"/>
+              <circle cx="181" cy="119" r="28" fill="none" stroke="#f3e4c1" stroke-width="1.5"/>
+              <path d="M176 132c-12-9-5-23 6-29 6 9 8 20-6 29zm8-2c1-10 8-17 17-20 1 12-5 20-17 20z" fill="#304336"/>
+              <text x="180" y="163" fill="#fff2d5" font-family="Georgia,serif" font-size="8" letter-spacing="2" text-anchor="middle">FIELD NOTES · COFFEE</text>
+            </svg>
+          </div>
+          <div class="project-info">
+            <span class="project-label">Packaging · Concept</span>
+            <h3>Field Notes — Coffee</h3>
+            <p>An artisan coffee packaging study featuring natural colours and a clean, considered label.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-art" style="background: linear-gradient(135deg, #f5b546, #f27b40 57%, #df4c42);">
+            <svg viewBox="0 0 360 240" role="img" aria-label="Concept citrus beverage advertisement">
+              <circle cx="266" cy="92" r="75" fill="#f9d869"/><circle cx="266" cy="92" r="57" fill="none" stroke="#fff0bd" stroke-width="3"/>
+              <path d="M266 35v114M209 92h114M226 52l80 80m0-80-80 80" stroke="#fff0bd" stroke-width="2"/>
+              <path d="M0 199q88-56 170 0t190 0v41H0z" fill="#d74036"/>
+              <text x="24" y="66" fill="#552a1e" font-family="Georgia,serif" font-size="30">FRESH</text>
+              <text x="25" y="99" fill="#fff4d6" font-family="Arial,sans-serif" font-size="12" letter-spacing="4">SQUEEZE THE DAY</text>
+              <rect x="25" y="116" width="92" height="29" rx="14" fill="#fff4d6"/><text x="71" y="135" fill="#a9432e" font-family="Arial,sans-serif" font-size="9" text-anchor="middle">CITRUS · CONCEPT</text>
+            </svg>
+          </div>
+          <div class="project-info"><span class="project-label">Advertising · Concept</span><h3>Fresh — Citrus ad</h3><p>A bright beverage campaign using juicy citrus graphics, confident type, and punchy colour.</p></div>
+        </article>
+        <article class="project-card">
+          <div class="project-art" style="background: linear-gradient(150deg, #f2e5d2, #d1b598);">
+            <svg viewBox="0 0 360 240" role="img" aria-label="Concept organic skincare brand identity">
+              <rect x="85" y="31" width="190" height="178" rx="5" fill="#f5f0e7" transform="rotate(-5 180 120)" />
+              <circle cx="180" cy="101" r="42" fill="#dce3cc"/><path d="M178 125c-22-17-9-43 6-53 12 14 13 38-6 53zm8-4c3-16 15-27 28-29 2 17-9 30-28 29z" fill="#667b57"/>
+              <text x="180" y="164" fill="#334332" font-family="Georgia,serif" font-size="22" text-anchor="middle">botanica</text>
+              <text x="180" y="181" fill="#74816a" font-family="Arial,sans-serif" font-size="7" letter-spacing="2" text-anchor="middle">SKINCARE · BRAND STUDY</text>
+            </svg>
+          </div>
+          <div class="project-info"><span class="project-label">Branding · Concept</span><h3>Botanica — Skincare</h3><p>A calm botanical identity exploration with an earthy palette and a clean product label.</p></div>
+        </article>
+        <article class="project-card">
+          <div class="project-art" style="background: radial-gradient(ellipse at 50% 100%, #512150, #171329 73%);">
+            <svg viewBox="0 0 360 240" role="img" aria-label="Concept electronic music event poster">
+              <circle cx="256" cy="92" r="63" fill="#d545e7" fill-opacity=".75"/><circle cx="256" cy="92" r="45" fill="#ffba67" fill-opacity=".8"/>
+              <path d="M0 178h18l9-20 12 47 14-78 15 52 14-31 13 30 13-55 15 76 15-41 14 20h20" fill="none" stroke="#7df6e2" stroke-width="3"/>
+              <text x="25" y="54" fill="#fff" font-family="Arial,sans-serif" font-size="11" letter-spacing="5">ONE NIGHT ONLY</text>
+              <text x="24" y="116" fill="#fff" font-family="Arial,sans-serif" font-size="41" font-weight="bold">AFTER</text>
+              <text x="24" y="153" fill="#7df6e2" font-family="Arial,sans-serif" font-size="41" font-weight="bold">HOURS</text>
+              <text x="26" y="218" fill="#e7d8f8" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">EVENT POSTER · CONCEPT</text>
+            </svg>
+          </div>
+          <div class="project-info"><span class="project-label">Poster design · Concept</span><h3>After Hours — Event</h3><p>A high-energy event poster mixing neon colour, a bold headline, and an audio waveform.</p></div>
+        </article>
+        <article class="project-card">
+          <div class="project-art" style="background: linear-gradient(135deg, #d5ddf3, #9caedb 55%, #625e93);">
+            <svg viewBox="0 0 360 240" role="img" aria-label="Concept creative technology conference identity">
+              <path d="M181 30 286 89v62l-105 59-106-59V89z" fill="#232345" stroke="#ece2ff" stroke-opacity=".65"/>
+              <path d="m181 30 0 62 105-3M181 92l-106-3m106 3v118m0-118 52-30v59l-52 29-53-29V59z" fill="none" stroke="#aa94ff" stroke-width="2"/>
+              <circle cx="181" cy="92" r="12" fill="#ffbc79"/>
+              <text x="180" y="124" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="bold" text-anchor="middle">SHIFT</text>
+              <text x="180" y="143" fill="#d9d0ff" font-family="Arial,sans-serif" font-size="7" letter-spacing="2" text-anchor="middle">DESIGN × TECHNOLOGY</text>
+              <text x="180" y="179" fill="#fff" font-family="Arial,sans-serif" font-size="7" letter-spacing="2" text-anchor="middle">CONFERENCE IDENTITY · CONCEPT</text>
+            </svg>
+          </div>
+          <div class="project-info"><span class="project-label">Event identity · Concept</span><h3>SHIFT — Design summit</h3><p>A modular geometric visual direction for a fictional design and technology conference.</p></div>
+        </article>
+        <article class="project-card">
+          <div class="project-art" style="background: linear-gradient(135deg, #f6d4cb, #ea9da0 54%, #c77081);">
+            <svg viewBox="0 0 360 240" role="img" aria-label="Concept artisan bakery social media campaign">
+              <rect x="29" y="25" width="302" height="190" rx="4" fill="#fff0df"/>
+              <circle cx="262" cy="95" r="54" fill="#e8a347"/><circle cx="262" cy="95" r="42" fill="#edc16e"/>
+              <path d="M227 104q0-28 35-34 35 6 35 34v20h-70z" fill="#8d422c"/><path d="M236 91q26-20 53 0" fill="none" stroke="#f6dfaa" stroke-width="5"/>
+              <text x="50" y="71" fill="#4c3027" font-family="Georgia,serif" font-size="25">baked</text>
+              <text x="49" y="103" fill="#c85f5d" font-family="Georgia,serif" font-style="italic" font-size="25">with love</text>
+              <text x="51" y="131" fill="#745850" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">FRESH FROM THE OVEN</text>
+              <path d="M49 151h83" stroke="#d79b72"/>
+              <text x="51" y="172" fill="#745850" font-family="Arial,sans-serif" font-size="8" letter-spacing="2">SOCIAL CAMPAIGN · CONCEPT</text>
+            </svg>
+          </div>
+          <div class="project-info"><span class="project-label">Social media · Concept</span><h3>Baked — Bakery campaign</h3><p>A warm bakery social graphic that pairs friendly lettering with a freshly baked treat.</p></div>
+        </article>
+        <article class="project-card">
+          <div class="project-art" style="background: radial-gradient(ellipse at 51% 36%, #ecbb7c, #a46342 52%, #322335);">
+            <svg viewBox="0 0 360 240" role="img" aria-label="Concept boutique restaurant menu">
+              <rect x="78" y="20" width="204" height="200" fill="#202a25" stroke="#e5c18b" transform="rotate(3 180 120)"/>
+              <circle cx="180" cy="70" r="23" fill="none" stroke="#e5c18b"/><path d="M168 70h24m-12-12v24" stroke="#e5c18b"/>
+              <text x="180" y="111" fill="#f3e8d1" font-family="Georgia,serif" font-size="20" text-anchor="middle">Saffron</text>
+              <text x="180" y="130" fill="#d8b583" font-family="Arial,sans-serif" font-size="7" letter-spacing="3" text-anchor="middle">A MODERN TABLE</text>
+              <path d="M120 146h120" stroke="#b99c72" stroke-opacity=".7"/>
+              <text x="180" y="164" fill="#f3e8d1" font-family="Georgia,serif" font-size="9" text-anchor="middle">Seasonal · Local · Made with care</text>
+              <text x="180" y="193" fill="#d8b583" font-family="Arial,sans-serif" font-size="7" letter-spacing="2" text-anchor="middle">MENU DESIGN · CONCEPT</text>
+            </svg>
+          </div>
+          <div class="project-info"><span class="project-label">Print design · Concept</span><h3>Saffron — Menu design</h3><p>An elegant restaurant menu concept built around editorial type and a rich, moody palette.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell education reveal" id="education">
+      <div>
+        <span class="section-kicker">04 / Education</span>
+        <h2>Learning with<br><em>creative purpose.</em></h2>
+      </div>
+      <div class="education-card">
+        <span class="course-length">One-year course</span>
+        <h3>Graphic Designing</h3>
+        <p><strong>Superior College</strong></p>
+        <p>I completed a one-year Graphic Designing course at Superior College and hold a certificate for the course. I apply my design training to visual communication, branding, typography, and creative layouts.</p>
+        <div class="certificate"><span aria-hidden="true">✦</span> Graphic Designing Course Certificate</div>
+        <div class="skill-list" aria-label="Graphic design areas">
+          <span>Graphic design</span><span>Visual communication</span><span>Branding</span><span>Typography</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell contact-layout reveal" id="contact">
+      <div class="contact-copy">
+        <span class="section-kicker">05 / Contact & enquiries</span>
+        <h2>Have a project?<br><em>Let’s talk design.</em></h2>
+        <p>Share a few details below. Your enquiry will open as a ready-to-send WhatsApp message, so you can review and send it directly.</p>
+        <a class="contact-detail" href="https://wa.me/923068778018" target="_blank" rel="noopener noreferrer">
+          <span class="detail-icon" aria-hidden="true">↗</span>
+          <span><small>Call or WhatsApp</small>+92 306 8778018</span>
+        </a>
+        <div class="contact-detail">
+          <span class="detail-icon" aria-hidden="true">◎</span>
+          <span><small>Project availability</small>Remote enquiries welcome</span>
+        </div>
+        <div class="contact-detail">
+          <span class="detail-icon" aria-hidden="true">⌖</span>
+          <span><small>Location</small>Shared on request</span>
+        </div>
+      </div>
+      <form class="inquiry-form" id="inquiry-form">
+        <h3>Tell me about your project</h3>
+        <p class="form-hint">Fields marked * are required. No account or email address needed.</p>
+        <div class="form-row">
+          <div class="field"><label for="client-name">Your name *</label><input id="client-name" name="name" autocomplete="name" placeholder="e.g. Sara Khan" required></div>
+          <div class="field"><label for="client-service">Design service *</label>
+            <select id="client-service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Logo & brand identity</option><option>Social media graphics</option><option>Poster or flyer</option><option>Advertisement creative</option><option>Packaging concept</option><option>Other custom design</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="client-budget">Estimated budget</label>
+            <select id="client-budget" name="budget"><option value="">Choose if known</option><option>Under PKR 5,000</option><option>PKR 5,000–15,000</option><option>PKR 15,000–30,000</option><option>PKR 30,000+</option><option>Let’s discuss</option></select>
+          </div>
+          <div class="field"><label for="client-deadline">Preferred deadline</label><input id="client-deadline" name="deadline" type="date"></div>
+        </div>
+        <div class="field"><label for="client-brief">Project details *</label><textarea id="client-brief" name="brief" placeholder="What would you like designed? Tell me about the business, audience, and any ideas you have." required></textarea></div>
+        <button class="button" type="submit">Continue to WhatsApp <span class="arrow" aria-hidden="true">↗</span></button>
+        <p class="form-hint" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <div class="footer-contact"><span>© <span id="year"></span> Ashan Raza · Graphic Designer</span><span>Based on project brief · Remote enquiries welcome</span><a href="#home">Back to top ↑</a></div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const inquiryForm = document.getElementById("inquiry-form");
+    document.querySelectorAll(".project-card").forEach((card) => {
+      const title = card.querySelector("h3").textContent.trim();
+      const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      const link = document.createElement("a");
+      link.className = card.className;
+      link.href = `project.html?project=${encodeURIComponent(slug)}`;
+      link.setAttribute("aria-label", `View project: ${title}`);
+      link.innerHTML = card.innerHTML;
+      const action = document.createElement("span");
+      action.className = "project-cta";
+      action.textContent = "View project details ↗";
+      link.querySelector(".project-info").append(action);
+      card.replaceWith(link);
+
+      link.addEventListener("pointermove", (event) => {
+        if (event.pointerType === "touch" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const bounds = link.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+        link.style.transform = `perspective(900px) rotateX(${-y * 5}deg) rotateY(${x * 5}deg) translateY(-4px)`;
+      });
+      link.addEventListener("pointerleave", () => { link.style.transform = ""; });
+    });
+
+    inquiryForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!inquiryForm.reportValidity()) return;
+
+      const details = new FormData(inquiryForm);
+      const message = [
+        "Hello Ashan, I'd like to enquire about a graphic design project.",
+        "",
+        `Name: ${details.get("name")}`,
+        `Service: ${details.get("service")}`,
+        `Estimated budget: ${details.get("budget") || "Not specified"}`,
+        `Preferred deadline: ${details.get("deadline") || "Not specified"}`,
+        "",
+        `Project details: ${details.get("brief")}`
+      ].join("\n");
+      const whatsappUrl = `https://wa.me/923068778018?text=${encodeURIComponent(message)}`;
+      const status = document.getElementById("form-status");
+      status.textContent = "Your enquiry is ready. Open WhatsApp to review and send it:";
+      const link = document.createElement("a");
+      link.href = whatsappUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = " Open WhatsApp message ↗";
+      link.style.color = "var(--green)";
+      status.append(link);
+    });
+
+    const revealItems = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach((item) => observer.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add("visible"));
+    }
+
+    const portrait = document.getElementById("portrait");
+    const frame = portrait.querySelector(".portrait-frame");
+    portrait.addEventListener("pointermove", (event) => {
+      if (event.pointerType === "touch") return;
+      const bounds = portrait.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      frame.style.transform = `rotateY(${-7 + x * 10}deg) rotateX(${2 - y * 8}deg) translateZ(16px)`;
+    });
+    portrait.addEventListener("pointerleave", () => {
+      frame.style.transform = "";
+    });
+  </script>
+</body>
+</html>
