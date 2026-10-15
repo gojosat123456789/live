@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090c">
+  <meta name="description" content="Discover Sole Luxe: considered sneakers, exceptional materials, and a new perspective on every step.">
+  <title>SOLE LUXE — Step Into Luxury</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%2308090c'/%3E%3Ctext x='10' y='28' fill='%23dce3eb' font-family='Arial' font-size='25' font-weight='bold'%3ES%3C/text%3E%3Ccircle cx='30' cy='28' r='2.5' fill='%2342a5ff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Sole Luxe home"><span class="brand-mark">S<span>.</span></span><span class="brand-name">SOLE<span>LUXE</span></span></a>
+      <button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Open navigation"><span></span><span></span></button>
+      <div class="nav-menu" id="main-menu">
+        <a href="#top">Home</a><a href="#collections">Collections</a><a href="#collections" data-category-link="men">Men</a>
+        <a href="#collections" data-category-link="women">Women</a><a href="#collections" data-collection="new">New arrivals</a><a href="#story">Our story</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-button" type="button" data-open-search aria-label="Search products"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg></button>
+        <button class="icon-button" type="button" data-show-wishlist aria-label="Show wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 8.8c0 5.4-8.2 10.2-8.2 10.2S3.8 14.2 3.8 8.8A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.2 2.7Z"></path></svg><span class="icon-count wishlist-count" aria-live="polite">0</span></button>
+        <button class="icon-button cart-trigger" type="button" data-open-cart aria-label="Open shopping bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg><span class="icon-count cart-count" aria-live="polite">0</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-grain" aria-hidden="true"></div><div class="hero-orb hero-orb-one" aria-hidden="true"></div><div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Designed to move you</p>
+        <h1 id="hero-title">STEP INTO<br><span>LUXURY.</span></h1>
+        <p class="hero-subtitle">Where innovation meets every step.</p>
+        <div class="hero-buttons"><a class="button button-primary" href="#collections">Shop collection <span aria-hidden="true">↗</span></a><button class="button button-ghost" type="button" data-explore-3d>Explore in 3D <span aria-hidden="true">＋</span></button></div>
+      </div>
+      <div class="hero-scene" aria-label="Interactive 3D Sole Luxe sneaker display">
+        <canvas id="shoe-canvas" aria-label="Interactive 3D sneaker. Drag or move your pointer to rotate."></canvas>
+        <img class="hero-fallback" src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Premium black and red sneaker, shown as the 3D model fallback">
+        <div class="scene-loading" role="status">Preparing the experience<span class="loading-dots">...</span></div>
+        <p class="model-notice" hidden>3D model not found. Add your GLB at <code>assets/models/sole-luxe-shoe.glb</code>.</p>
+        <div class="scene-index"><span>01</span><span class="scene-index-rule"></span><span>03</span></div>
+      </div>
+      <div class="hero-meta"><span>ENGINEERED FOR EVERY DAY</span><span>EST. MMXXIV&nbsp; · &nbsp;LAHORE</span></div>
+      <a href="#collections" class="scroll-cue"><span class="scroll-cue-line"></span> Scroll to discover</a>
+    </section>
+
+    <section class="ticker" aria-label="Sole Luxe commitments"><div class="ticker-track"><span>Crafted with intent</span><i>✳</i><span>Comfort, considered</span><i>✳</i><span>Made to move</span><i>✳</i><span>Crafted with intent</span><i>✳</i><span>Comfort, considered</span><i>✳</i><span>Made to move</span><i>✳</i></div></section>
+
+    <section class="section collection-section" id="collections">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> The Sole Luxe edit</p><h2>Find your <span>next.</span></h2></div><p class="section-intro">Thoughtfully made. Impossible to ignore.<br>Discover your new everyday essential.</p></div>
+      <div class="collection-chips" aria-label="Shop collections">
+        <button class="collection-chip is-active" type="button" data-collection="all">All styles</button><button class="collection-chip" type="button" data-collection="bestseller">Best sellers</button><button class="collection-chip" type="button" data-collection="new">New arrivals</button><button class="collection-chip" type="button" data-collection="running">Running</button><button class="collection-chip" type="button" data-collection="casual">Casual</button><button class="collection-chip" type="button" data-collection="luxury">Luxury</button><button class="collection-chip" type="button" data-collection="sports">Sports</button>
+      </div>
+      <form class="filter-bar" id="filter-form" role="search" aria-label="Filter products">
+        <label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg><input id="product-search" type="search" placeholder="Search sneakers..." aria-label="Search products"></label>
+        <label class="select-wrap"><span class="sr-only">Category</span><select id="category-filter"><option value="all">All categories</option><option value="men">Men</option><option value="women">Women</option><option value="unisex">Unisex</option></select></label>
+        <label class="select-wrap"><span class="sr-only">Price range</span><select id="price-filter"><option value="all">Any price</option><option value="0-20000">Under PKR 20,000</option><option value="20000-30000">PKR 20,000–30,000</option><option value="30000-999999">PKR 30,000+</option></select></label>
+        <label class="select-wrap"><span class="sr-only">Shoe size</span><select id="size-filter"><option value="all">Any size</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select></label>
+        <label class="select-wrap sort-select"><span class="sr-only">Sort products</span><select id="sort-filter"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="newest">Newest</option><option value="bestselling">Best selling</option></select></label>
+        <button class="text-button clear-filters" type="reset">Clear filters <span aria-hidden="true">×</span></button>
+      </form>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="no-results" id="no-results" hidden>No sneakers match those filters. <button class="text-button" type="button" data-clear-filters>Clear filters</button></p>
+      <div class="collection-bottom"><span id="result-count"></span><a class="text-link" href="#collections" data-clear-filters>Explore all styles <span>↗</span></a></div>
+    </section>
+
+    <section class="editorial" id="story">
+      <div class="editorial-image"><img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&amp;fit=crop&amp;w=1500&amp;q=85" alt="Close-up of carefully designed premium sneakers" loading="lazy"><span class="image-caption">The art of the everyday</span></div>
+      <div class="editorial-copy reveal"><p class="eyebrow"><span class="eyebrow-line"></span> A different point of view</p><h2>Less noise.<br><span>More feeling.</span></h2><p>We believe the best things in life move with you. Sole Luxe brings considered design and all-day comfort together, for shoes that feel as good as they look—wherever you are headed.</p><a href="#why-us" class="button button-ghost">Get to know us <span aria-hidden="true">↗</span></a><span class="editorial-watermark" aria-hidden="true">S.</span></div>
+    </section>
+
+    <section class="section benefits-section" id="why-us">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> The finer details</p><h2>Good things, <span>by design.</span></h2></div><p class="section-intro">Comfort that keeps up. Craft that holds its own.<br>Every detail has a reason to be here.</p></div>
+      <div class="benefit-grid">
+        <article class="benefit-card reveal"><span class="benefit-number">01</span><div class="benefit-icon" aria-hidden="true">◌</div><h3>Comfort, all day</h3><p>Responsive cushioning and a considered fit that feel good from your first step to your last.</p></article>
+        <article class="benefit-card reveal"><span class="benefit-number">02</span><div class="benefit-icon" aria-hidden="true">✳</div><h3>Materials with meaning</h3><p>Thoughtfully selected materials, carefully made to look better the longer you wear them.</p></article>
+        <article class="benefit-card reveal"><span class="benefit-number">03</span><div class="benefit-icon" aria-hidden="true">↗</div><h3>Made for your everyday</h3><p>Easy-to-wear silhouettes meet a little something extra. Your plans, your pace, your pair.</p></article>
+      </div>
+    </section>
+
+    <section class="testimonial-section">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“It’s the rare pair that feels considered without trying too hard. I wear mine everywhere.”</blockquote><div class="testimonial-author"><span class="avatar" aria-hidden="true">A</span><span><strong>Ayesha M.</strong><small>Sole Luxe customer</small></span></div><div class="testimonial-pagination" aria-hidden="true"><span class="is-current"></span><span></span><span></span></div>
+    </section>
+
+    <section class="newsletter-section" id="newsletter"><div class="newsletter-orb" aria-hidden="true"></div><div class="newsletter-copy reveal"><p class="eyebrow"><span class="eyebrow-line"></span> The Sole Luxe list</p><h2>Good things<br><span>are in motion.</span></h2><p>First looks, thoughtful edits, and the occasional note from us. Only the good stuff.</p></div><form class="newsletter-form" id="newsletter-form"><label for="newsletter-email" class="sr-only">Email address</label><input id="newsletter-email" type="email" placeholder="Your email address" required autocomplete="email"><button class="button button-primary" type="submit">Count me in <span aria-hidden="true">↗</span></button><p class="form-note" id="newsletter-message" aria-live="polite">By subscribing, you agree to receive occasional Sole Luxe updates.</p></form></section>
+
+    <section class="section faq-section" id="faq"><div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> A few good questions</p><h2>Good to <span>know.</span></h2></div><p class="section-intro">Need a hand? <a class="inline-link" href="mailto:hello@example.com">Get in touch ↗</a></p></div>
+      <div class="faq-list">
+        <details><summary>How do I find my size? <span aria-hidden="true">+</span></summary><p>Our styles fit true to size for most customers. If you are between sizes, we recommend going up one. The size selector on each shoe shows what is currently available.</p></details>
+        <details><summary>How long does delivery take? <span aria-hidden="true">+</span></summary><p>Delivery timing depends on your location. We will confirm the estimated delivery window when we contact you about your order.</p></details>
+        <details><summary>Can I change or cancel my order? <span aria-hidden="true">+</span></summary><p>Please contact our team as soon as possible after placing your order. Changes depend on whether your order has already been prepared for dispatch.</p></details>
+        <details><summary>How can I care for my Sole Luxe sneakers? <span aria-hidden="true">+</span></summary><p>Wipe gently with a soft, slightly damp cloth and let your sneakers air dry away from direct heat. Check the care guidance for your particular materials.</p></details>
+      </div>
+    </section>
+
+    <section class="gallery-section"><div class="gallery-heading"><p class="eyebrow"><span class="eyebrow-line"></span> Out in the world</p><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">@soleluxe.studio <span aria-hidden="true">↗</span></a></div><div class="gallery-grid"><img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Everyday sneakers ready for a city walk" loading="lazy"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Detailed side profile of contemporary sneakers" loading="lazy"><img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Minimal sneaker styling" loading="lazy"><img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Sculptural sneaker design" loading="lazy"><img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Classic sneaker in a clean studio setting" loading="lazy"></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark">S<span>.</span></span><span class="brand-name">SOLE<span>LUXE</span></span></a><p>Considered footwear.<br>Made to move with you.</p><div class="social-links"><a href="https://www.instagram.com/" aria-label="Instagram (sample link)" target="_blank" rel="noreferrer">ig</a><a href="https://www.pinterest.com/" aria-label="Pinterest (sample link)" target="_blank" rel="noreferrer">p</a><a href="https://www.tiktok.com/" aria-label="TikTok (sample link)" target="_blank" rel="noreferrer">tk</a></div></div><div class="footer-column"><h3>Explore</h3><a href="#collections">All sneakers</a><a href="#collections" data-collection="new">New arrivals</a><a href="#collections" data-collection="bestseller">Best sellers</a><a href="#story">Our story</a></div><div class="footer-column"><h3>Here to help</h3><a href="#faq">FAQs</a><a href="mailto:hello@example.com">Contact us</a><a href="#faq">Delivery &amp; returns</a><a href="#faq">Size guide</a></div><div class="footer-column footer-contact"><h3>Say hello</h3><p>Demo contact details<br>Replace before launch.</p><a href="mailto:hello@example.com">hello@example.com</a><span>Lahore, Pakistan</span></div></div><div class="footer-bottom"><span>© <span id="current-year"></span> Sole Luxe. Demo storefront.</span><span>Thoughtfully made, always.</span><div><a href="#faq">Privacy</a><a href="#faq">Terms</a></div></div></footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert>
+    <div class="drawer-heading"><div><p class="eyebrow">Your selection</p><h2 id="cart-title">Shopping bag <span class="drawer-count"></span></h2></div><button class="icon-button close-drawer" type="button" data-close-panels aria-label="Close shopping bag">×</button></div>
+    <div class="cart-lines" id="cart-lines"></div>
+    <div class="cart-empty" id="cart-empty" hidden><span aria-hidden="true">◇</span><p>Your bag is waiting for something good.</p><button class="button button-ghost" type="button" data-close-panels>Explore the collection</button></div>
+    <div class="cart-summary" id="cart-summary"><div class="summary-row"><span>Subtotal</span><strong id="cart-subtotal">PKR 0</strong></div><p>Delivery costs confirmed when we get in touch.</p><button class="button button-primary checkout-launch" type="button" data-open-checkout>Continue to checkout <span aria-hidden="true">↗</span></button></div>
+  </aside>
+
+  <dialog class="quick-view-modal" id="quick-view" aria-labelledby="quick-title"><button class="icon-button modal-close" type="button" data-close-dialog aria-label="Close quick view">×</button><div class="quick-view-content" id="quick-view-content"></div></dialog>
+
+  <dialog class="checkout-modal" id="checkout-modal" aria-labelledby="checkout-title"><button class="icon-button modal-close" type="button" data-close-dialog aria-label="Close checkout">×</button><div class="checkout-layout"><div class="checkout-form-wrap"><p class="eyebrow"><span class="eyebrow-line"></span> Just a few details</p><h2 id="checkout-title">Make it <span>yours.</span></h2><p class="checkout-intro">We’ll confirm your order and delivery details with you directly.</p><form id="checkout-form" novalidate><label>Full name<input name="name" required autocomplete="name" minlength="2"></label><div class="form-row"><label>Phone number<input name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label><label>Email address<input name="email" type="email" required autocomplete="email"></label></div><label>Delivery address<textarea name="address" required autocomplete="street-address" rows="3"></textarea></label><label>City<input name="city" required autocomplete="address-level2"></label><p class="checkout-error" id="checkout-error" role="alert" hidden></p><button class="button button-primary whatsapp-button" type="submit">Place order via WhatsApp <span aria-hidden="true">↗</span></button><p class="secure-note">Demo checkout only. No payment details are collected or processed.</p></form></div><aside class="checkout-summary"><h3>Your order</h3><div id="checkout-lines"></div><div class="summary-row checkout-total"><span>Total</span><strong id="checkout-total">PKR 0</strong></div><p>Delivery costs confirmed with your order.</p></aside></div></dialog>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
