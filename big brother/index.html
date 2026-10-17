@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17130f">
+  <meta name="description" content="Umair Akbar's web development portfolio featuring Café Lumière, a responsive café website concept with an interactive menu, 3D-inspired design and demo ordering.">
+  <title>Umair Akbar — Web Developer Portfolio | Café Lumière</title>
+  <link rel="preload" as="image" href="assets/cafe-interior.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="menu-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-banner">A fictional café website concept created for a developer portfolio · Menu, prices and delivery details are sample data</div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Café Lumière homepage">Café <span>Lumière</span><small>International coffee &amp; dining</small></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#story">About</a>
+      <a href="#menu">Café Menu</a>
+      <a href="#design">3D Design</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <button class="cart-icon" type="button" data-open-cart aria-label="Open cart">Bag <span class="cart-count" data-cart-count>0</span></button>
+      <a class="button nav-cta" href="#menu">Order Now <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="floating-particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="shell hero-content">
+        <p class="eyebrow"><span></span> An independent café concept · Portfolio demo</p>
+        <h1 id="hero-title">Good Coffee.<br><em>Great Food.</em><br>Beautiful Moments.</h1>
+        <p>Experience premium international coffee, fresh bakery delights, delicious meals, and a welcoming café atmosphere.</p>
+        <div class="actions">
+          <a class="button" href="#menu">Explore Our Menu <span aria-hidden="true">↗</span></a>
+          <button class="button button-glass" type="button" data-open-cart>Order Online <span aria-hidden="true">＋</span></button>
+          <a class="text-link" href="#design">View 3D Café <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="hero-note">A premium café idea, imagined in 3D by Umair Akbar.</p>
+      </div>
+      <div class="hero-cup" aria-hidden="true">
+        <span class="steam">〰</span><span class="cup-handle"></span>
+        <span class="cup-rim"><i></i></span><span class="cup-body"><small>Lumière</small></span>
+        <span class="cup-saucer"></span>
+      </div>
+      <a class="scroll-cue" href="#story">Scroll to explore <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <div class="trust-strip shell" aria-label="Café highlights">
+      <span>✳ Specialty coffee</span><span>✳ Fresh ingredients</span><span>✳ Thoughtful hospitality</span><span>✳ A demo concept by Umair Akbar</span>
+    </div>
+
+    <section class="section story-section" id="story">
+      <div class="shell story-layout">
+        <div class="story-image-wrap">
+          <img src="assets/cafe-detail.jpg" alt="A bright and welcoming café interior concept" loading="lazy">
+          <span class="image-caption">A place to slow down and stay awhile</span>
+          <div class="stat-card"><strong>25<span>+</span></strong><small>sample menu items</small></div>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">01 / Our café story</p>
+          <h2>More than coffee.<br><em>A place to belong.</em></h2>
+          <p>Café Lumière is a fictional modern international café concept inspired by premium coffee culture, fresh ingredients, thoughtful food presentation and welcoming service.</p>
+          <p>The idea is simple: create a destination where guests can enjoy a good cup, international-inspired food and memorable moments, all brought to life in a polished digital experience.</p>
+          <div class="story-stats">
+            <div><strong>25+</strong><span>Sample menu items</span></div>
+            <div><strong>5</strong><span>Food categories</span></div>
+            <div><strong>Indoor + outdoor</strong><span>Seating concept</span></div>
+            <div><strong>Online</strong><span>Ordering demo</span></div>
+          </div>
+          <p class="demo-note">Illustrative project only. Café details, menu and prices are not a real business offer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section design-section" id="design">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">02 / Step inside</p>
+          <h2>A café concept, with <em>a little more depth.</em></h2>
+          <p>Explore the imagined spaces. This interactive 3D-inspired CSS scene works without a 3D plug-in or graphics hardware.</p>
+        </div>
+        <div class="design-tabs" role="group" aria-label="Choose a café scene">
+          <button class="scene-tab is-active" type="button" data-scene="exterior" aria-pressed="true">View Exterior</button>
+          <button class="scene-tab" type="button" data-scene="interior" aria-pressed="false">View Interior</button>
+          <button class="scene-tab" type="button" data-scene="counter" aria-pressed="false">Coffee Counter</button>
+          <button class="scene-tab" type="button" data-scene="dining" aria-pressed="false">Dining Area</button>
+        </div>
+        <div class="scene-stage" data-active-scene="exterior" aria-live="polite">
+          <div class="scene-photo"></div>
+          <div class="scene-scrim"></div>
+          <div class="scene-building" aria-hidden="true">
+            <div class="building-roof"><span>CAFÉ LUMIÈRE</span></div>
+            <div class="building-glass">
+              <div class="glass-pane"><i class="chair chair-one"></i><i class="table table-one"></i></div>
+              <div class="glass-pane"><i class="chair chair-two"></i><i class="table table-two"></i></div>
+              <div class="door-pane"><i></i></div>
+            </div>
+            <div class="building-terrace"><i></i><i></i><i></i></div>
+          </div>
+          <div class="scene-caption"><span>CAFÉ LUMIÈRE · DESIGN STUDY</span><h3 data-scene-title>A welcoming street-side entrance</h3><p data-scene-description>Glass, warm timber and a softly lit welcome after dusk.</p></div>
+          <span class="scene-badge">CSS 3D scene · Static visual fallback included</span>
+        </div>
+        <div class="scene-features">
+          <span>01 / Glass-front entrance</span><span>02 / Warm timber details</span><span>03 / Outdoor terrace</span><span>04 / Ambient lighting</span>
+        </div>
+        <p class="scene-hint">Drag the scene to turn the design. Use the view buttons to explore different spaces.</p>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">03 / A closer look</p>
+          <h2>Little details, <em>lovingly imagined.</em></h2>
+          <p>Open any image to view it closer. This gallery mixes café photography with desktop and mobile website mockups.</p>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-card gallery-wide" type="button" data-gallery-image="assets/cafe-detail.jpg" data-gallery-caption="An elegant glass-front café concept"><img src="assets/cafe-detail.jpg" alt="Café Lumière glass-front exterior design inspiration" loading="lazy"><span>01 / Glass-front café</span></button>
+          <button class="gallery-card" type="button" data-gallery-image="assets/cafe-interior.jpg" data-gallery-caption="Warmly lit interior and relaxed seating"><img src="assets/cafe-interior.jpg" alt="Warm 3D-inspired interior with comfortable seating" loading="lazy"><span>02 / The café interior</span></button>
+          <button class="gallery-card" type="button" data-gallery-image="assets/coffee.jpg" data-gallery-caption="Espresso and cappuccino, ready to enjoy"><img src="assets/coffee.jpg" alt="Cappuccino at the imagined coffee counter" loading="lazy"><span>03 / Coffee counter</span></button>
+          <button class="gallery-card" type="button" data-gallery-image="assets/brunch.jpg" data-gallery-caption="Fresh food, made for sharing"><img src="assets/brunch.jpg" alt="Freshly prepared food at a café table" loading="lazy"><span>04 / Food &amp; brunch</span></button>
+          <button class="gallery-card" type="button" data-gallery-image="assets/pastry.jpg" data-gallery-caption="A little something sweet"><img src="assets/pastry.jpg" alt="Café dessert and bakery inspiration" loading="lazy"><span>05 / Bakery &amp; desserts</span></button>
+          <button class="gallery-card" type="button" data-gallery-image="assets/cafe-detail.jpg" data-gallery-caption="A relaxed table for coffee, lunch and conversation"><img src="assets/cafe-detail.jpg" alt="The café dining area concept" loading="lazy"><span>06 / Dining area</span></button>
+          <div class="gallery-card website-preview" aria-label="Desktop website portfolio mockup">
+            <div class="preview-toolbar"><i></i><i></i><i></i><span>cafe-lumiere.example</span></div>
+            <div class="preview-screen"><b>Café Lumière</b><strong>Good coffee.<br>Better moments.</strong><span>EXPLORE THE MENU ↗</span></div>
+            <span>07 / Desktop website</span>
+          </div>
+          <div class="gallery-card website-preview mobile-preview" aria-label="Mobile website portfolio mockup">
+            <div class="preview-toolbar"><i></i><span>Mobile experience</span></div>
+            <div class="preview-screen"><b>Café Lumière</b><strong>Made for the little moments.</strong><span>ORDER ONLINE ↗</span></div>
+            <span>08 / Mobile ordering</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="shell">
+        <div class="section-heading menu-heading">
+          <p class="eyebrow">03 / Something for every table</p>
+          <h2>Our menu, <em>your moment.</em></h2>
+          <p>Explore every menu category, browse dishes and add your favorites to the demo cart.</p>
+          <span class="sample-label">DEMONSTRATION MENU · PRICES IN PKR · SAMPLE ONLY</span>
+        </div>
+        <div class="menu-tools">
+          <div class="category-filters" data-category-filters aria-label="Filter menu by category"></div>
+          <div class="menu-search">
+            <label class="sr-only" for="menu-search">Search menu</label>
+            <input id="menu-search" type="search" placeholder="Search the menu…" autocomplete="off">
+            <label class="sr-only" for="menu-sort">Sort menu</label>
+            <select id="menu-sort">
+              <option value="featured">Featured order</option><option value="name">Name A–Z</option>
+              <option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option>
+            </select>
+          </div>
+        </div>
+        <p class="results-count" data-menu-results role="status"></p>
+        <div class="product-grid" data-product-grid></div>
+        <p class="demo-note centered">Menu items, images and prices are fictional demonstration content, not available for real purchase.</p>
+      </div>
+    </section>
+
+    <section class="section facilities-section" id="services">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">04 / Designed around the details</p>
+          <h2>The little comforts <em>matter.</em></h2>
+          <p>Facilities shown here describe an aspirational café concept, not a verified physical location.</p>
+        </div>
+        <div class="facility-grid">
+          <article class="facility-card"><span>01</span><i>⌂</i><h3>Comfortable indoor seating</h3><p>A considered mix of cozy tables and relaxed sofa seating.</p></article>
+          <article class="facility-card"><span>02</span><i>♧</i><h3>Outdoor terrace</h3><p>Greenery, fresh air and a little room to linger.</p></article>
+          <article class="facility-card"><span>03</span><i>✦</i><h3>Thoughtful coffee bar</h3><p>A welcoming counter for carefully crafted drinks.</p></article>
+          <article class="facility-card"><span>04</span><i>▱</i><h3>Bakery display</h3><p>A tempting showcase for fresh, sweet treats.</p></article>
+          <article class="facility-card"><span>05</span><i>⌁</i><h3>Free Wi-Fi concept</h3><p>A comfortable spot for a catch-up or focused hour.</p></article>
+          <article class="facility-card"><span>06</span><i>♡</i><h3>Family-friendly space</h3><p>A relaxed and welcoming design for every guest.</p></article>
+          <article class="facility-card"><span>07</span><i>◷</i><h3>Table reservations</h3><p>Try the frontend-only reservation form below.</p></article>
+          <article class="facility-card"><span>08</span><i>↗</i><h3>Takeaway &amp; pickup</h3><p>Ordering options shown as an interactive demo.</p></article>
+          <article class="facility-card"><span>09</span><i>❄</i><h3>Air-conditioning concept</h3><p>A comfortable setting for a long coffee break.</p></article>
+          <article class="facility-card"><span>10</span><i>ϟ</i><h3>Charging points</h3><p>A small practical touch for longer visits.</p></article>
+          <article class="facility-card"><span>11</span><i>✧</i><h3>Clean washrooms</h3><p>Thoughtful guest amenities in the design brief.</p></article>
+          <article class="facility-card"><span>12</span><i>♡</i><h3>Customer care</h3><p>Warm, attentive support is part of the concept.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section order-section" id="order">
+      <div class="shell order-layout">
+        <div class="order-copy">
+          <p class="eyebrow">05 / A frontend ordering demo</p>
+          <h2>Build a cart.<br><em>Imagine the rest.</em></h2>
+          <p>Add an item to start a sample checkout. This prototype does not take payment, send an order to a kitchen or provide real deliveries.</p>
+          <ul class="order-list"><li>Adjust quantities and remove items</li><li>Choose sample pickup or delivery zones</li><li>Review an illustrative delivery fee, tax and total</li></ul>
+          <button class="button" type="button" data-open-cart>Open the demo cart <span aria-hidden="true">↗</span></button>
+        </div>
+        <aside class="delivery-card">
+          <span class="delivery-icon" aria-hidden="true">⌁</span>
+          <p class="eyebrow">Editable sample settings</p>
+          <h3>Delivery zone examples</h3>
+          <div class="delivery-row"><span>0–2 km</span><strong>Rs. 100</strong></div>
+          <div class="delivery-row"><span>2–4 km</span><strong>Rs. 150</strong></div>
+          <div class="delivery-row"><span>4–6 km</span><strong>Rs. 200</strong></div>
+          <div class="delivery-row"><span>6–8 km</span><strong>Rs. 250</strong></div>
+          <div class="delivery-row"><span>8–10 km</span><strong>Rs. 350</strong></div>
+          <div class="delivery-row"><span>10–12 km</span><strong>Rs. 450</strong></div>
+          <p class="small-note">Sample fees only. Real service areas, charges and delivery are not configured.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section reservation-section" id="reservation">
+      <div class="shell reservation-layout">
+        <div>
+          <p class="eyebrow">06 / Save a seat</p>
+          <h2>A table for <em>your next moment.</em></h2>
+          <p>Try a sample reservation. Submitting the form only shows a confirmation on this page; it does not book a real table.</p>
+          <div class="reservation-photo" role="img" aria-label="A warmly lit restaurant dining space"></div>
+        </div>
+        <form class="form-card" id="reservation-form">
+          <p class="eyebrow">Demo reservation</p>
+          <h3>Tell us about your visit</h3>
+          <label>Your name<input name="name" required autocomplete="name" placeholder="Name"></label>
+          <label>Phone number<input name="phone" required type="tel" autocomplete="tel" placeholder="Your number"></label>
+          <div class="form-row">
+            <label>Guests<select name="guests" required><option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+            <label>Date<input name="date" type="date" required></label>
+          </div>
+          <label>Preferred time<input name="time" type="time" required></label>
+          <label>Special request<textarea name="request" rows="3" placeholder="Optional"></textarea></label>
+          <button class="button" type="submit">Request a demo reservation <span aria-hidden="true">↗</span></button>
+          <p class="form-feedback" data-reservation-feedback role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section portfolio-section" id="portfolio">
+      <div class="shell portfolio-layout">
+        <div class="portfolio-copy">
+          <p class="eyebrow">07 / Selected project · Umair Akbar</p>
+          <h2>Designing digital places that <em>feel real.</em></h2>
+          <p class="portfolio-subtitle">Café Lumière — Responsive Café Website Concept</p>
+          <p>This portfolio project presents a fictional international café and the work behind its website: warm visual branding, a 3D-inspired café experience, responsive layouts, an interactive sample menu, and demo cart, reservation and delivery-fee features.</p>
+          <div class="developer">
+            <img src="assets/umair-akbar.jpeg" alt="Umair Akbar, web developer" loading="lazy">
+            <div><strong>Umair Akbar</strong><span>Web Developer · Frontend &amp; Full-Stack Projects</span></div>
+          </div>
+          <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React*</span><span>Three.js*</span><span>Laravel / MERN*</span></div>
+          <p class="small-note">*Possible integrations, not used in this static HTML/CSS/JavaScript demo.</p>
+          <div class="actions"><a class="button" href="#home">View Project Demo <span aria-hidden="true">↗</span></a><a class="text-link" href="#contact">Discuss a website <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <div class="portfolio-board">
+          <div class="mockup desktop-mockup">
+            <div class="mockup-bar"><i></i><i></i><i></i><span>cafelumiere.example</span></div>
+            <div class="mockup-hero"><b>Café Lumière</b><strong>Good coffee.<br>Great moments.</strong><span>EXPLORE THE MENU&nbsp; ↗</span></div>
+            <div class="mockup-cards"><i></i><i></i><i></i></div>
+          </div>
+          <div class="mockup mobile-mockup">
+            <div class="phone-speaker"></div><div class="phone-image"></div><b>Café Lumière</b><strong>A little moment, made better.</strong><span>ORDER AHEAD&nbsp; ↗</span>
+          </div>
+          <span class="mockup-caption">Responsive concept · Desktop + mobile</span>
+        </div>
+      </div>
+      <div class="shell project-details">
+        <article><span>01 / OVERVIEW</span><h3>One idea, end to end.</h3><p>Brand direction, content structure and a full responsive café experience in one cohesive concept.</p></article>
+        <article><span>02 / DESIGN PROCESS</span><h3>Warmth meets clarity.</h3><p>Start with a coffee-inspired palette, build a visual hierarchy and prototype an inviting 3D-styled scene.</p></article>
+        <article><span>03 / PROJECT CHALLENGE</span><h3>Make the demo honest.</h3><p>Present impressive ordering and delivery interfaces without implying real payment or booking integration.</p></article>
+        <article><span>04 / PROJECT OUTCOME</span><h3>Ready to explore.</h3><p>A working front-end showcase with practical pathways for future full-stack development.</p></article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="shell contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">08 / Let's work together</p>
+          <h2>Have a project<br>in <em>mind?</em></h2>
+          <p>Looking for a thoughtful website for your business? Connect with Umair Akbar to discuss your project.</p>
+          <a class="contact-phone" href="tel:+923068778018"><span>PHONE / WHATSAPP</span><strong>+92 306 877 8018</strong><small>Tap to call · WhatsApp chat</small></a>
+          <a class="button" href="https://wa.me/923068778018" target="_blank" rel="noopener noreferrer">Message Umair Akbar on WhatsApp <span aria-hidden="true">↗</span></a>
+          <p class="small-note">No café address, opening hours or café contact number are configured for this fictional project.</p>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="form-card contact-form" id="contact-form">
+            <p class="eyebrow">Project inquiry</p>
+            <h3>Tell me what you have in mind</h3>
+            <label>Your name<input name="name" required autocomplete="name" placeholder="Name"></label>
+            <label>Your email<input name="email" required type="email" autocomplete="email" placeholder="name@example.com"></label>
+            <label>Your message<textarea name="message" required rows="4" placeholder="A little about your website project…"></textarea></label>
+            <button class="button" type="submit">Prepare my inquiry <span aria-hidden="true">↗</span></button>
+            <p class="form-feedback" data-contact-feedback role="status"></p>
+            <p class="small-note">Frontend demo only; this form does not transmit or store messages.</p>
+          </form>
+          <div class="map-placeholder"><span aria-hidden="true">⌖</span><p>Location placeholder<br><small>No café address or map pin has been provided.</small></p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-main">
+      <div class="footer-brand"><a class="brand" href="#home">Café <span>Lumière</span><small>International Coffee &amp; Dining</small></a><p>Good Coffee. Great Food.<br>Beautiful Moments.</p><span class="demo-tag">FICTIONAL PROJECT · DEMO ONLY</span></div>
+      <div><h3>Explore</h3><a href="#story">About the café</a>      <a href="#design">3D design</a><a href="#gallery">Image gallery</a><a href="#menu">Sample menu</a><a href="#portfolio">Developer portfolio</a></div>
+      <div><h3>Menu</h3><a href="#menu" data-footer-category="Hot Coffee">Hot coffee</a><a href="#menu" data-footer-category="Breakfast">Breakfast</a><a href="#menu" data-footer-category="Burgers & Sandwiches">Burgers &amp; sandwiches</a><a href="#menu" data-footer-category="Desserts">Desserts</a></div>
+      <div><h3>Contact &amp; hours</h3><a href="tel:+923068778018">Umair Akbar · +92 306 877 8018</a><a href="https://wa.me/923068778018" target="_blank" rel="noopener noreferrer">WhatsApp the developer ↗</a><span>Café address: not provided</span><span>Opening hours: not provided</span></div>
+    </div>
+    <div class="shell footer-bottom"><span>© 2026 Umair Akbar · Web Developer</span><span>Demo menu, demo prices and demo delivery fees · No real café service is provided.</span><a href="#home">Back to top ↑</a></div>
+  </footer>
+
+  <div class="drawer-backdrop" data-close-cart></div>
+  <aside class="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">DEMO ORDER</p><h2 id="cart-title">Your bag <span data-cart-count>0</span></h2></div><button class="icon-button" type="button" data-close-cart aria-label="Close cart">×</button></div>
+    <p class="small-note">This sample cart does not place a real order or process payment.</p>
+    <div class="cart-items" data-cart-items></div>
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong data-subtotal>Rs. 0</strong></div>
+      <div><span>Delivery fee <small data-delivery-label>Pickup</small></span><strong data-delivery>Rs. 0</strong></div>
+      <div><span>Sample tax <small data-tax-label>0%</small></span><strong data-tax>Rs. 0</strong></div>
+      <div class="grand-total"><span>Estimated total</span><strong data-total>Rs. 0</strong></div>
+    </div>
+    <form class="checkout-form" id="checkout-form">
+      <h3>Demo checkout</h3>
+      <label>Fulfilment<select name="fulfilment"><option value="pickup">Pickup (demo)</option><option value="delivery">Delivery (demo)</option></select></label>
+      <label class="delivery-only" hidden>Delivery zone<select name="zone"><option value="2">0–2 km · Rs. 100</option><option value="4">2–4 km · Rs. 150</option><option value="6">4–6 km · Rs. 200</option><option value="8">6–8 km · Rs. 250</option><option value="10">8–10 km · Rs. 350</option><option value="12">10–12 km · Rs. 450</option><option value="outside">Beyond 12 km · Unavailable</option></select></label>
+      <p class="zone-message" data-zone-message role="status"></p>
+      <label class="delivery-only" hidden>Delivery address<textarea name="address" rows="2" placeholder="Demo only — do not submit a real address"></textarea></label>
+      <label>Your name<input name="customer" required autocomplete="name" placeholder="Name"></label>
+      <label>Phone number<input name="phone" required type="tel" autocomplete="tel" placeholder="Phone"></label>
+      <label>Order notes<textarea name="notes" rows="2" placeholder="Optional"></textarea></label>
+      <label>Payment method<select name="payment"><option>Cash on Delivery (demo only)</option><option>Pay at pickup (demo only)</option></select></label>
+      <button class="button checkout-submit" type="submit">Review demo order <span aria-hidden="true">↗</span></button>
+      <p class="form-feedback" data-checkout-feedback role="status"></p>
+    </form>
+  </aside>
+
+  <dialog class="item-dialog" aria-labelledby="item-dialog-title">
+    <button class="icon-button dialog-close" type="button" data-close-item aria-label="Close item details">×</button>
+    <img data-detail-image src="" alt="">
+    <div class="item-dialog-copy"><p class="eyebrow" data-detail-category></p><h2 id="item-dialog-title" data-detail-name></h2><p data-detail-description></p><strong data-detail-price></strong><button class="button" type="button" data-detail-add>Add to demo cart <span aria-hidden="true">＋</span></button></div>
+  </dialog>
+
+  <dialog class="confirmation-dialog" aria-labelledby="confirmation-title">
+    <span class="confirmation-mark" aria-hidden="true">✓</span>
+    <p class="eyebrow">FRONTEND DEMO</p><h2 id="confirmation-title">Your sample order is ready.</h2>
+    <p data-confirmation-copy></p><p class="small-note">No order was sent, no payment was taken and no delivery or booking has been created.</p>
+    <button class="button" type="button" data-close-confirmation>Continue exploring</button>
+  </dialog>
+
+  <dialog class="lightbox-dialog" aria-label="Gallery image viewer">
+    <button class="icon-button dialog-close" type="button" data-close-lightbox aria-label="Close gallery image">×</button>
+    <img data-lightbox-image src="" alt=""><p data-lightbox-caption></p>
+  </dialog>
+
+  <details class="admin-panel" id="demo-admin">
+    <summary>Demo admin · Edit sample menu &amp; fees</summary>
+    <form class="admin-form" id="admin-form">
+      <p class="demo-note">Local browser preview only. Changes are stored on this device and are not connected to a real café or server.</p>
+      <label>Menu item<select name="item" data-admin-item></select></label>
+      <div class="form-row"><label>Sample price (PKR)<input name="price" type="number" min="0" step="50" required></label><label class="check-label"><input name="available" type="checkbox"> Available in demo</label></div>
+      <h3>Demo checkout settings</h3>
+      <div class="form-row"><label>Sample tax (%)<input name="tax" type="number" min="0" max="100" step="0.5"></label><label>Free delivery above (PKR)<input name="freeThreshold" type="number" min="0" step="100"></label></div>
+      <div class="form-row"><label>Fee · 0–2 km<input name="fee2" type="number" min="0" step="50"></label><label>Fee · 2–4 km<input name="fee4" type="number" min="0" step="50"></label></div>
+      <div class="form-row"><label>Fee · 4–6 km<input name="fee6" type="number" min="0" step="50"></label><label>Fee · 6–8 km<input name="fee8" type="number" min="0" step="50"></label></div>
+      <div class="form-row"><label>Fee · 8–10 km<input name="fee10" type="number" min="0" step="50"></label><label>Fee · 10–12 km<input name="fee12" type="number" min="0" step="50"></label></div>
+      <div class="actions"><button class="button" type="submit">Save sample settings</button><button class="button button-outline admin-reset" type="button" data-reset-admin>Restore defaults</button></div>
+      <p class="form-feedback" data-admin-feedback role="status"></p>
+    </form>
+  </details>
+</body>
+</html>
