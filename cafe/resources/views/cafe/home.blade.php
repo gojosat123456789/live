@@ -97,17 +97,17 @@
 
         <section class="story-section" id="story">
             <div class="story-image">
+                <img class="owner-photo" src="{{ asset('images/umair-akbar.png') }}" alt="Umair Akbar, owner of Café Lumière" loading="lazy">
                 <div class="story-image-overlay"></div>
-                <div class="story-photo-caption"><span>THE LITTLE THINGS</span><span>ALWAYS MADE WITH HEART</span></div>
-                <div class="story-roundel"><span>A LITTLE PAUSE</span><b>TAKE<br>YOUR<br>TIME</b><span>YOU'RE RIGHT ON TIME</span></div>
+                <div class="story-photo-caption"><span>THE FOUNDER</span><span>ALWAYS MADE WITH HEART</span></div>
             </div>
             <div class="story-copy">
-                <div class="eyebrow"><span></span> A PLACE TO CALL YOURS</div>
-                <h2>Not just a café.<br><em>A feeling.</em></h2>
+                <div class="eyebrow"><span></span> MEET THE FOUNDER</div>
+                <h2 class="owner-name">{{ config('cafe.owner') }}</h2>
+                <p class="owner-title">FOUNDER & OWNER, CAFÉ LUMIÈRE</p>
                 <p>Somewhere between that first sip and the conversation that runs long, an ordinary day turns into a lovely one. That's the little bit of magic we're here for.</p>
                 <p>Come as you are. Stay for one more.</p>
                 <a class="text-link" href="#visit">Come say hello <span aria-hidden="true">↗</span></a>
-                <div class="owner-signature"><span class="signature-mark">U</span><span>A warm welcome from<strong>{{ config('cafe.owner') }}</strong><small>OWNER, CAFÉ LUMIÈRE</small></span><span class="signature-flourish">U.</span></div>
             </div>
         </section>
 
