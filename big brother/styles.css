@@ -55,6 +55,7 @@ img { display: block; max-width: 100%; }
 .nav { display: flex; align-items: center; gap: clamp(10px, 1.55vw, 22px); }
 .nav > a:not(.button) { color: rgba(255,255,255,.83); font-size: 10px; text-decoration: none; transition: color .2s ease; }
 .nav > a:not(.button):hover, .nav > a:not(.button):focus-visible { color: var(--gold-light); }
+.nav-project-link { padding: 8px 10px; border: 1px solid rgba(240,210,147,.4); }
 .button, .cart-icon, .icon-button { cursor: pointer; }
 .button {
   display: inline-flex;
@@ -432,7 +433,7 @@ dialog::backdrop { background: rgba(0,0,0,.76); backdrop-filter: blur(5px); }
   .shell { width: calc(100% - 40px); }
   .topbar { height: 72px; }
   .nav { gap: 13px; }
-  .nav > a:nth-child(2), .nav > a:nth-child(6) { display: none; }
+  .nav > a:nth-child(3), .nav > a:nth-child(4) { display: none; }
   .hero { min-height: 700px; }
   .hero-cup { right: 35px; bottom: 74px; transform: scale(.8); transform-origin: bottom right; }
   .trust-strip { flex-wrap: wrap; justify-content: flex-start; gap: 13px 25px; padding-block: 18px; font-size: 11px; }

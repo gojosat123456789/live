@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#17130f">
-  <meta name="description" content="Umair Akbar's web development portfolio featuring Café Lumière, a responsive café website concept with an interactive menu, 3D-inspired design and demo ordering.">
-  <title>Umair Akbar — Web Developer Portfolio | Café Lumière</title>
+  <meta name="description" content="Explore Umair Akbar's web developer portfolio, featuring Café Lumière: a responsive website concept with an interactive menu, CSS café scene and demo ordering experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Umair Akbar — Web Developer Portfolio">
+  <meta property="og:description" content="Web design and development portfolio featuring the Café Lumière responsive website concept.">
+  <title>Umair Akbar — Web Developer Portfolio</title>
   <link rel="preload" as="image" href="assets/cafe-interior.jpg">
   <link rel="stylesheet" href="styles.css">
   <script src="menu-data.js" defer></script>
@@ -13,20 +16,17 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="demo-banner">A fictional café website concept created for a developer portfolio · Menu, prices and delivery details are sample data</div>
+  <div class="demo-banner">UMAIR AKBAR · WEB DEVELOPER PORTFOLIO <span aria-hidden="true">—</span> FEATURED CASE STUDY: CAFÉ LUMIÈRE</div>
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="Café Lumière homepage">Café <span>Lumière</span><small>International coffee &amp; dining</small></a>
+    <a class="brand" href="#home" aria-label="Umair Akbar web developer portfolio">Umair <span>Akbar</span><small>Web developer portfolio</small></a>
     <nav class="nav" aria-label="Main navigation">
       <a href="#home">Home</a>
-      <a href="#story">About</a>
-      <a href="#menu">Café Menu</a>
-      <a href="#design">3D Design</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">Services</a>
+      <a href="#portfolio">Featured Work</a>
+      <a href="#story">About Project</a>
+      <a href="#design">Design Demo</a>
       <a href="#contact">Contact</a>
-      <button class="cart-icon" type="button" data-open-cart aria-label="Open cart">Bag <span class="cart-count" data-cart-count>0</span></button>
-      <a class="button nav-cta" href="#menu">Order Now <span aria-hidden="true">↗</span></a>
+      <a class="nav-project-link" href="#menu">Explore Demo</a>
+      <a class="button nav-cta" href="#contact">Let's Talk <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
@@ -35,15 +35,15 @@
       <div class="hero-image" aria-hidden="true"></div>
       <div class="floating-particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <div class="shell hero-content">
-        <p class="eyebrow"><span></span> An independent café concept · Portfolio demo</p>
-        <h1 id="hero-title">Good Coffee.<br><em>Great Food.</em><br>Beautiful Moments.</h1>
-        <p>Experience premium international coffee, fresh bakery delights, delicious meals, and a welcoming café atmosphere.</p>
+        <p class="eyebrow"><span></span> Umair Akbar · Web developer portfolio</p>
+        <h1 id="hero-title">Thoughtful websites.<br><em>Made to matter.</em></h1>
+        <p>I design and build engaging, responsive web experiences. Explore Café Lumière, a fictional café concept showcasing my visual design and interactive front-end work.</p>
         <div class="actions">
-          <a class="button" href="#menu">Explore Our Menu <span aria-hidden="true">↗</span></a>
-          <button class="button button-glass" type="button" data-open-cart>Order Online <span aria-hidden="true">＋</span></button>
-          <a class="text-link" href="#design">View 3D Café <span aria-hidden="true">↓</span></a>
+          <a class="button" href="#portfolio">View Featured Project <span aria-hidden="true">↗</span></a>
+          <a class="button button-glass" href="#design">Explore Project Demo <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#contact">Contact me <span aria-hidden="true">↗</span></a>
         </div>
-        <p class="hero-note">A premium café idea, imagined in 3D by Umair Akbar.</p>
+        <p class="hero-note">Featured case study: Café Lumière · Concept project, not a real café.</p>
       </div>
       <div class="hero-cup" aria-hidden="true">
         <span class="steam">〰</span><span class="cup-handle"></span>
@@ -65,7 +65,7 @@
           <div class="stat-card"><strong>25<span>+</span></strong><small>sample menu items</small></div>
         </div>
         <div class="story-copy">
-          <p class="eyebrow">01 / Our café story</p>
+          <p class="eyebrow">About the featured project</p>
           <h2>More than coffee.<br><em>A place to belong.</em></h2>
           <p>Café Lumière is a fictional modern international café concept inspired by premium coffee culture, fresh ingredients, thoughtful food presentation and welcoming service.</p>
           <p>The idea is simple: create a destination where guests can enjoy a good cup, international-inspired food and memorable moments, all brought to life in a polished digital experience.</p>
@@ -83,7 +83,7 @@
     <section class="section design-section" id="design">
       <div class="shell">
         <div class="section-heading">
-          <p class="eyebrow">02 / Step inside</p>
+          <p class="eyebrow">02 / Visual design concept</p>
           <h2>A café concept, with <em>a little more depth.</em></h2>
           <p>Explore the imagined spaces. This interactive 3D-inspired CSS scene works without a 3D plug-in or graphics hardware.</p>
         </div>
@@ -118,7 +118,7 @@
     <section class="section gallery-section" id="gallery">
       <div class="shell">
         <div class="section-heading">
-          <p class="eyebrow">03 / A closer look</p>
+          <p class="eyebrow">03 / Project gallery</p>
           <h2>Little details, <em>lovingly imagined.</em></h2>
           <p>Open any image to view it closer. This gallery mixes café photography with desktop and mobile website mockups.</p>
         </div>
@@ -146,7 +146,7 @@
     <section class="section menu-section" id="menu">
       <div class="shell">
         <div class="section-heading menu-heading">
-          <p class="eyebrow">03 / Something for every table</p>
+          <p class="eyebrow">04 / Interactive menu demo</p>
           <h2>Our menu, <em>your moment.</em></h2>
           <p>Explore every menu category, browse dishes and add your favorites to the demo cart.</p>
           <span class="sample-label">DEMONSTRATION MENU · PRICES IN PKR · SAMPLE ONLY</span>
@@ -172,7 +172,7 @@
     <section class="section facilities-section" id="services">
       <div class="shell">
         <div class="section-heading">
-          <p class="eyebrow">04 / Designed around the details</p>
+          <p class="eyebrow">05 / Café concept details</p>
           <h2>The little comforts <em>matter.</em></h2>
           <p>Facilities shown here describe an aspirational café concept, not a verified physical location.</p>
         </div>
@@ -196,7 +196,7 @@
     <section class="section order-section" id="order">
       <div class="shell order-layout">
         <div class="order-copy">
-          <p class="eyebrow">05 / A frontend ordering demo</p>
+          <p class="eyebrow">06 / Front-end ordering demo</p>
           <h2>Build a cart.<br><em>Imagine the rest.</em></h2>
           <p>Add an item to start a sample checkout. This prototype does not take payment, send an order to a kitchen or provide real deliveries.</p>
           <ul class="order-list"><li>Adjust quantities and remove items</li><li>Choose sample pickup or delivery zones</li><li>Review an illustrative delivery fee, tax and total</li></ul>
@@ -220,7 +220,7 @@
     <section class="section reservation-section" id="reservation">
       <div class="shell reservation-layout">
         <div>
-          <p class="eyebrow">06 / Save a seat</p>
+          <p class="eyebrow">07 / Reservation form demo</p>
           <h2>A table for <em>your next moment.</em></h2>
           <p>Try a sample reservation. Submitting the form only shows a confirmation on this page; it does not book a real table.</p>
           <div class="reservation-photo" role="img" aria-label="A warmly lit restaurant dining space"></div>
@@ -245,16 +245,15 @@
     <section class="section portfolio-section" id="portfolio">
       <div class="shell portfolio-layout">
         <div class="portfolio-copy">
-          <p class="eyebrow">07 / Selected project · Umair Akbar</p>
-          <h2>Designing digital places that <em>feel real.</em></h2>
-          <p class="portfolio-subtitle">Café Lumière — Responsive Café Website Concept</p>
-          <p>This portfolio project presents a fictional international café and the work behind its website: warm visual branding, a 3D-inspired café experience, responsive layouts, an interactive sample menu, and demo cart, reservation and delivery-fee features.</p>
+          <p class="eyebrow">Featured work · Case study 01</p>
+          <h2>Café Lumière: a <em>website concept.</em></h2>
+          <p class="portfolio-subtitle">Responsive website design · Front-end concept</p>
+          <p>A fictional café brought to life as a complete website concept. This case study showcases warm visual branding, responsive layouts, a CSS-built café scene, an interactive sample menu and clearly labeled ordering and reservation demos.</p>
           <div class="developer">
             <img src="assets/umair-akbar.jpeg" alt="Umair Akbar, web developer" loading="lazy">
             <div><strong>Umair Akbar</strong><span>Web Developer · Frontend &amp; Full-Stack Projects</span></div>
           </div>
-          <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React*</span><span>Three.js*</span><span>Laravel / MERN*</span></div>
-          <p class="small-note">*Possible integrations, not used in this static HTML/CSS/JavaScript demo.</p>
+          <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive design</span><span>Interactive UI</span><span>CSS 3D scene</span></div>
           <div class="actions"><a class="button" href="#home">View Project Demo <span aria-hidden="true">↗</span></a><a class="text-link" href="#contact">Discuss a website <span aria-hidden="true">↓</span></a></div>
         </div>
         <div class="portfolio-board">
@@ -280,7 +279,7 @@
     <section class="section contact-section" id="contact">
       <div class="shell contact-layout">
         <div class="contact-copy">
-          <p class="eyebrow">08 / Let's work together</p>
+          <p class="eyebrow">Let's work together</p>
           <h2>Have a project<br>in <em>mind?</em></h2>
           <p>Looking for a thoughtful website for your business? Connect with Umair Akbar to discuss your project.</p>
           <a class="contact-phone" href="tel:+923068778018"><span>PHONE / WHATSAPP</span><strong>+92 306 877 8018</strong><small>Tap to call · WhatsApp chat</small></a>
@@ -306,8 +305,8 @@
 
   <footer class="footer">
     <div class="shell footer-main">
-      <div class="footer-brand"><a class="brand" href="#home">Café <span>Lumière</span><small>International Coffee &amp; Dining</small></a><p>Good Coffee. Great Food.<br>Beautiful Moments.</p><span class="demo-tag">FICTIONAL PROJECT · DEMO ONLY</span></div>
-      <div><h3>Explore</h3><a href="#story">About the café</a>      <a href="#design">3D design</a><a href="#gallery">Image gallery</a><a href="#menu">Sample menu</a><a href="#portfolio">Developer portfolio</a></div>
+      <div class="footer-brand"><a class="brand" href="#home">Umair <span>Akbar</span><small>Web developer portfolio</small></a><p>Thoughtful digital experiences.<br>Made to matter.</p><span class="demo-tag">FEATURED PROJECT · CONCEPT DEMO</span></div>
+      <div><h3>Explore</h3><a href="#portfolio">Featured case study</a><a href="#story">About the project</a><a href="#design">Interactive design demo</a><a href="#gallery">Project gallery</a><a href="#contact">Contact Umair</a></div>
       <div><h3>Menu</h3><a href="#menu" data-footer-category="Hot Coffee">Hot coffee</a><a href="#menu" data-footer-category="Breakfast">Breakfast</a><a href="#menu" data-footer-category="Burgers & Sandwiches">Burgers &amp; sandwiches</a><a href="#menu" data-footer-category="Desserts">Desserts</a></div>
       <div><h3>Contact &amp; hours</h3><a href="tel:+923068778018">Umair Akbar · +92 306 877 8018</a><a href="https://wa.me/923068778018" target="_blank" rel="noopener noreferrer">WhatsApp the developer ↗</a><span>Café address: not provided</span><span>Opening hours: not provided</span></div>
     </div>
@@ -342,7 +341,7 @@
 
   <dialog class="item-dialog" aria-labelledby="item-dialog-title">
     <button class="icon-button dialog-close" type="button" data-close-item aria-label="Close item details">×</button>
-    <img data-detail-image src="" alt="">
+    <img data-detail-image alt="">
     <div class="item-dialog-copy"><p class="eyebrow" data-detail-category></p><h2 id="item-dialog-title" data-detail-name></h2><p data-detail-description></p><strong data-detail-price></strong><button class="button" type="button" data-detail-add>Add to demo cart <span aria-hidden="true">＋</span></button></div>
   </dialog>
 
@@ -355,7 +354,7 @@
 
   <dialog class="lightbox-dialog" aria-label="Gallery image viewer">
     <button class="icon-button dialog-close" type="button" data-close-lightbox aria-label="Close gallery image">×</button>
-    <img data-lightbox-image src="" alt=""><p data-lightbox-caption></p>
+    <img data-lightbox-image alt=""><p data-lightbox-caption></p>
   </dialog>
 
   <details class="admin-panel" id="demo-admin">
